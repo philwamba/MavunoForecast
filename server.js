@@ -17,6 +17,9 @@ const getWeather = require('./services/weatherService');
 // Initialize Express App
 const app = express();
 
+// Trust the 'X-Forwarded-For' header from proxies
+app.set('trust proxy', true);
+
 // Security Middleware
 app.use(helmet());
 app.use(cors());
@@ -51,6 +54,7 @@ app.post('/ussd', async (req, res) => {
             let { sessionId, serviceCode, phoneNumber, text } = req.body;
 
             let user = await User.findOne({ phoneNumber });
+            console.log('User:', user);
             let response = '';
 
             if (!user) {
