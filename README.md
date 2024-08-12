@@ -41,13 +41,12 @@ MavunoForecast is a USSD-based weather alert system targeting an East African au
    git clone https://github.com/philwamba/mavunoforecast.git
    cd mavunoforecast
    ```
-## Installation
-
-### Install dependencies:
-
-```bash
-npm install
-```
+2. **Installation**
+   ### Install dependencies:
+   
+   ```bash
+   npm install
+   ```
 
 ## Contributing
 
